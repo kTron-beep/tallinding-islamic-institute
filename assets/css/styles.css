@@ -747,6 +747,7 @@ body.menu-open {
   height: 100%;
   background: transparent;
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -770,10 +771,15 @@ body.menu-open {
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-base);
-  z-index: 10;
+  z-index: 100;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto;
 }
 
 .carousel-btn:hover {
@@ -2184,7 +2190,7 @@ body {
   }
   
   .language-switcher {
-    display: none;
+    display: flex;
   }
 
   .mobile-menu-toggle {
@@ -2201,6 +2207,9 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
   
   [dir="rtl"] .header-right {
@@ -2354,20 +2363,27 @@ body {
   }
   
   .carousel-btn {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
   
   .carousel-btn i {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   
   .carousel-btn-prev {
-    left: 5px;
+    left: 10px;
   }
   
   .carousel-btn-next {
-    right: 5px;
+    right: 10px;
+  }
+  
+  .carousel-btn:active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(0.9);
   }
 }
 

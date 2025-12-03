@@ -551,17 +551,30 @@ function initHeroCarousel() {
         clearInterval(carouselInterval);
     }
     
-    // Event listeners for navigation buttons
-    nextBtn.addEventListener('click', () => {
+    // Function to handle button click/touch
+    function handleNext() {
         nextSlide();
         stopCarousel();
         startCarousel(); // Restart after manual navigation
-    });
+    }
     
-    prevBtn.addEventListener('click', () => {
+    function handlePrev() {
         prevSlide();
         stopCarousel();
         startCarousel(); // Restart after manual navigation
+    }
+    
+    // Event listeners for navigation buttons - support both click and touch
+    nextBtn.addEventListener('click', handleNext);
+    nextBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handleNext();
+    });
+    
+    prevBtn.addEventListener('click', handlePrev);
+    prevBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handlePrev();
     });
     
     // Pause on hover (desktop only)
