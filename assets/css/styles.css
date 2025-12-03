@@ -2245,11 +2245,11 @@ body {
   }
   
   .logo-text {
-    margin-left: 90px;
+    margin-left: 0;
   }
   
   [dir="rtl"] .logo-text {
-    margin-right: 90px;
+    margin-right: 0;
   }
   
   .logo-image img {
@@ -2258,6 +2258,14 @@ body {
   
   .logo {
     gap: 0.8rem;
+  }
+  
+  .language-switcher {
+    display: flex !important;
+  }
+  
+  .header-right {
+    display: flex !important;
   }
 
   .mission-vision {
@@ -2385,8 +2393,15 @@ body {
     background: rgba(255, 255, 255, 0.4);
     transform: translateY(-50%) scale(0.9);
   }
-}
-
+  
+  .language-switcher {
+    display: flex !important;
+  }
+  
+  .header-right {
+    display: flex !important;
+  }
+  
   .hero h2 {
     font-size: 1.8rem;
   }
@@ -2489,16 +2504,24 @@ body {
   .mission-text.arabic, .vision-text.arabic {
     font-size: 1.1rem;
   }
+  
+  .language-switcher {
+    display: flex !important;
+  }
+  
+  .header-right {
+    display: flex !important;
+  }
 }
 
 @media (max-width: 400px) {
   /* Enhanced Logo Text Responsive */
   .logo-text {
-    margin-left: 60px;
+    margin-left: 0;
   }
   
   [dir="rtl"] .logo-text {
-    margin-right: 60px;
+    margin-right: 0;
   }
   
   .logo-text h1 {
@@ -2511,6 +2534,19 @@ body {
   
   .logo {
     gap: 0.5rem;
+  }
+  
+  .language-switcher {
+    display: flex !important;
+  }
+  
+  .header-right {
+    display: flex !important;
+  }
+  
+  .lang-btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
   }
   
   .header-banner {
